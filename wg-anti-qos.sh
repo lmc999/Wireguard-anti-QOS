@@ -50,7 +50,7 @@ DNS = 8.8.8.8
 MTU = 1250
 [Peer]
 PublicKey = $s2
-Endpoint = 127.0.0.1:1195
+Endpoint = 127.0.0.1:9999
 AllowedIPs = 0.0.0.0/0, ::0/0
 PersistentKeepalive = 25
 EOF
