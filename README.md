@@ -12,9 +12,9 @@ Wireguard走UDP协议，部分运营商会对UDP进行限速QOS处理使连接�
 
 用Winscp等软件登入VPS,下载目录/etc/wireguard/中的client.conf到Tunsafe配置文件目录
 
-下载Tunsafe用脚本文件 https://github.com/lmc999/Wireguard-anti-QOS/archive/master.zip
+下载Tunsafe用批处理文件文件： https://github.com/lmc999/Wireguard-anti-QOS/archive/master.zip
 
-将压缩文件解压并将文件夹内的所有文件解压到 D:\software\TunSafe\bat
+解压缩文件，并将文件夹内的所有文件解压到 D:\software\TunSafe\bat
 
 ##### 本教程Tunsafe默认安装路径 D:\software\TunSafe,如果你的安装路径不一样请注意修改clien.conf中的批处理程序的路径.同时建议安装路径不要有空格。
 
