@@ -99,7 +99,7 @@ cat > /etc/rc.d/init.d/udp<<-EOF
 #!/bin/sh
 #chkconfig: 2345 80 90
 #description:udp
-nohup udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:1195  --raw-mode faketcp  -a -k passwd >udp2raw.log 2>&1 &
+nohup ./udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:1195  --raw-mode faketcp  -a -k passwd >udp2raw.log 2>&1 &
 EOF
 
 chmod +x /etc/rc.d/init.d/udp
