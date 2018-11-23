@@ -16,7 +16,7 @@ Wireguard走UDP协议，部分运营商会对UDP进行限速QOS处理使连接�
 
 将压缩文件解压并将文件夹内的所有文件解压到 D:\software\TunSafe\bat
 
-### 本教程Tunsafe默认安装路径 D:\software\TunSafe,如果你的安装路径不一样请注意修改clien.conf中的批处理程序的路径.同时建议安装路径不要有空格。
+##### 本教程Tunsafe默认安装路径 D:\software\TunSafe,如果你的安装路径不一样请注意修改clien.conf中的批处理程序的路径.同时建议安装路径不要有空格。
 
 用记事本打开start.bat，修改44.55.66.77为你Wireguard服务器ip
 
