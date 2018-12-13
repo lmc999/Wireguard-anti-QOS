@@ -42,7 +42,7 @@ cat > /etc/wireguard/client.conf <<-EOF
 PrivateKey = $c1
 Address = 10.0.0.2/24 
 PreUp = start D:\software\TunSafe\bat\start.bat
-PreUp = ping -n 2 127.1 >nul
+PreUp = ping -n 4 127.1 >nul
 PostUp = start D:\software\TunSafe\bat\routes-up.bat
 PostDown = start D:\software\TunSafe\bat\routes-down.bat
 PostDown = start D:\software\TunSafe\bat\stop.bat
