@@ -81,11 +81,11 @@ wireguard_install(){
     service iptables restart
     echo 1 > /proc/sys/net/ipv4/ip_forward
     echo "net.ipv4.ip_forward = 1" > /etc/sysctl.conf
-    cd /usr/local/bin
+    mkdir /etc/udp
+    cd /etc/udp
 curl -o udp2raw https://raw.githubusercontent.com/lmc999/OpenvpnForGames/master/udp2raw
-chmod +x /usr/local/bin/udp2raw
-cd
-nohup udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:1195 --raw-mode faketcp -a -k passwd >udp2raw.log 2>&1 &
+chmod +x /etc/udp/udp2raw
+nohup ./udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:1195 --raw-mode faketcp -a -k passwd >udp2raw.log 2>&1 &
 
 #下载批处理文件
 #curl -o /etc/wireguard/start.bat https://raw.githubusercontent.com/lmc999/Wireguard-anti-QOS/master/start.bat
@@ -99,7 +99,8 @@ cat > /etc/rc.d/init.d/udp<<-EOF
 #!/bin/sh
 #chkconfig: 2345 80 90
 #description:udp
-nohup udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:1195 --raw-mode faketcp -a -k passwd >udp2raw.log 2>&1 &
+cd /etc/udp
+nohup ./udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:1195 --raw-mode faketcp -a -k passwd >udp2raw.log 2>&1 &
 EOF
 
 chmod +x /etc/rc.d/init.d/udp
